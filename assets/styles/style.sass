@@ -1,0 +1,334 @@
+$grayColor: #EFEFEF
+$greenColor: #66C05D
+$darkColor: #333333
+
+
+*, ::after, ::before
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+ol[class], ul[class]
+  padding: 0
+
+blockquote, body, dd, dl, figcaption, figure, h1, h2, h3, h4, li, ol, p, ul
+  margin: 0
+
+ol[class], ul[class]
+  list-style: none
+
+a, a:not([class])
+  text-decoration-skip-ink: auto
+  text-decoration: none
+  color: $darkColor
+
+img
+  display: block
+
+article > * + *
+  margin-top: 1em
+
+button, input, select, textarea
+  font: inherit
+
+body
+  min-height: 100vh
+  scroll-behavior: smooth
+  text-rendering: optimizeSpeed
+  color: $darkColor
+  font-family: 'Roboto', sans-serif
+
+.container
+  max-width: 1110px
+  width: 57.8%
+  margin: 0 auto
+  @media(max-width: 900px)
+    width: 80%
+
+.nav
+  display: flex
+  align-items: center
+  gap: 30px
+  justify-content: center
+  padding: 16px 30px
+  background: $grayColor
+  @media(max-width: 600px)
+    flex-wrap: wrap
+    row-gap: 10px
+  &__item
+    font-weight: 400
+    font-size: 14px
+
+.header
+  padding: 20px 0
+  border-bottom: 1px solid $grayColor
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media(max-width: 475px)
+      flex-direction: column
+      gap: 20px
+  &__logo
+    display: flex
+    align-items: center
+    gap: 20px
+    @media(max-width: 600px)
+      gap: 10px
+    &_name
+      font-weight: 700
+      font-size: 36px
+      line-height: 42px
+      letter-spacing: 0.1em
+      color: $greenColor
+      text-transform: uppercase
+      @media(max-width: 600px)
+        font-size: 25px
+    &_img
+      @media(max-width: 600px)
+        width: 60px
+.contact
+  display: flex
+  align-items: center
+  gap: 40px
+  @media(max-width: 1100px)
+    gap: 20px
+  @media(max-width: 1020px)
+    flex-direction: column
+    gap: 10px
+  &__phone
+    font-weight: 400
+    font-size: 16px
+    color: #000
+  &__callback
+    font-weight: 400
+    font-size: 14px
+    color: #000000
+    padding: 12px 26px
+    border: 2px solid $greenColor
+    border-radius: 40px
+    transition: all .3s ease
+    &:hover
+      background: $greenColor
+      color: #fff
+.range
+  display: flex
+  align-items: center
+  gap: 40px
+  justify-content: center
+  padding: 30px 0
+  @media(max-width: 850px)
+    flex-wrap: wrap
+    width: 80%
+    margin: 0 auto
+    row-gap: 15px
+  &__item
+    font-weight: 400
+    font-size: 16px
+    color: #000000
+.banner
+  height: 604px
+  background: url("../img/banner.png") center center / cover
+  display: flex
+  align-items: center
+  &__container
+    display: flex
+    flex-direction: column
+    gap: 50px
+    @media(max-width: 410px)
+      gap: 20px
+  &__title
+    font-weight: 700
+    font-size: 48px
+    color: #FFFFFF
+    @media(max-width: 410px)
+      font-size: 30px
+  &__desc
+    font-weight: 400
+    font-size: 14px
+    color: #FFFFFF
+    max-width: 308px
+  &__button
+    padding: 11px 45px
+    border: 2px solid #FFFFFF
+    border-radius: 40px
+    color: #fff
+    display: flex
+    align-self: flex-start
+
+.special
+  background: $grayColor
+  padding: 65px 0 132px
+  &__header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 0 21px
+    gap: 15px
+    @media(max-width: 640px)
+      flex-direction: column
+    &_title
+      font-weight: 700
+      font-size: 24px
+      color: #000000
+      @media(max-width: 900px)
+        font-size: 20px
+      @media(max-width: 640px)
+        order: 2
+    &_img
+      padding-right: 25px
+      @media(max-width: 640px)
+        order: 1
+  &__container
+    @media(max-width: 940px)
+      width: 80%
+      margin: 0 auto
+  &__row
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    margin: 0 0 100px
+    @media(max-width: 1500px)
+      flex-wrap: wrap
+      justify-content: center
+  &__item
+    padding: 25px 30px
+    background: #FFFFFF
+    display: flex
+    flex-direction: column
+    gap: 20px
+    align-items: center
+    max-width: 255px
+    &_name
+      font-weight: 400
+      font-size: 14px
+      text-align: center
+      color: #333333
+    &_price
+      font-weight: 500
+      font-size: 21px
+      text-align: center
+      letter-spacing: 0.05em
+      color: #000000
+    &_button
+      padding: 8px 39px
+      font-weight: 400
+      font-size: 14px
+      text-align: center
+      letter-spacing: 0.05em
+      color: #FFFFFF
+      background: $greenColor
+      border-radius: 30px
+      transition: all .3s ease
+      border: 1px solid $greenColor
+      &:hover
+        background: none
+        color: $greenColor
+  .info
+    display: flex
+    gap: 30px
+    justify-content: space-between
+    @media(max-width: 1150px)
+      flex-direction: column
+    &__inner
+      display: flex
+      flex-direction: column
+      gap: 25px
+    &__item
+      padding: 35px 45px 35px 40px
+      background: $greenColor
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      align-items: center
+      position: relative
+      @media(max-width: 450px)
+        padding: 20px
+      &_title
+        font-weight: 700
+        font-size: 18px
+        line-height: 21px
+        color: #FFFFFF
+        @media(max-width: 450px)
+          font-size: 16px
+      &_desc
+        font-weight: 400
+        font-size: 14px
+        line-height: 20px
+        color: #FFFFFF
+        max-width: 231px
+        @media(max-width: 450px)
+          font-size: 12px
+      &_button
+        padding: 9px 28px
+        border: 2px solid #FFFFFF
+        border-radius: 30px
+        color: #FFFFFF
+        font-weight: 400
+        font-size: 14px
+        display: flex
+        align-self: flex-start
+      &_img
+        position: absolute
+        right: 45px
+    &__form
+      &_input
+        font-weight: 400
+        font-size: 14px
+        color: #C4C4C4
+        padding: 9px 25px
+        transition: all .3s ease
+        border: none
+        border-radius: 30px
+        &:focus, &:hover
+          outline: none
+          color: #000
+.footer
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 37px 0
+    gap: 20px
+    @media(max-width: 1120px)
+      flex-direction: column
+  &__address
+    font-weight: 400
+    font-size: 14px
+    color: #000000
+  &__contact
+    @media(max-width: 1500px)
+      flex-direction: column
+      gap: 10px
+    @media(max-width: 1120px)
+      flex-direction: row
+      gap: 20px
+    @media(max-width: 400px)
+      flex-direction: column
+      gap: 10px
+  .social
+    display: flex
+    align-items: center
+    gap: 20px
+    @media(max-width: 1180px)
+      gap: 10px
+    &__item
+      width: 45px
+      height: 45px
+      border-radius: 100%
+      border: 2px solid $greenColor
+      display: flex
+      align-items: center
+      justify-content: center
+  .addition
+    background: $grayColor
+    &__container
+      display: flex
+      align-items: center
+      justify-content: space-between
+      gap: 30px
+      padding: 25px 0
+    &__policy, &__copyright
+      font-weight: 400
+      font-size: 12px
+      color: #828282
